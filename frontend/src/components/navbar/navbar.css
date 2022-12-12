@@ -1,0 +1,31 @@
+.navbar{
+    /* height: 50px;
+    background-color: #003580;
+    display: flex;
+    justify-content: center; */
+  }
+  
+  .navContainer{
+    /* background: url('/Users/jaynaxissa/dev/hammie-giver/frontend/public/images/img-1.jpg') fixed;
+    height: 135px;
+    background-size: contain;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1000px rgbd(0,0,0,0.2);
+    object-fit: contain; */
+  }
+  
+  .logo{
+    font-weight: 500;
+  }
+  
+  /* .navButton{
+    margin-left: 20px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #003580;
+  } */

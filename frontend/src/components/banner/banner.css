@@ -1,0 +1,15 @@
+.thumbs-wrapper {
+	display: none;
+}
+
+.carousel-status {
+	display: none;
+}
+
+.carousel.carousel-slider {
+	height: 200px;
+}
+
+.control-dots {
+	display: none;
+}
