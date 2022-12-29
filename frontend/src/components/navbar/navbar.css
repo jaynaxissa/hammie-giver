@@ -1,31 +1,35 @@
 .navbar{
-    /* height: 50px;
-    background-color: #003580;
+    height: 50px;
+    background-color: #ff75ef;
     display: flex;
-    justify-content: center; */
+    justify-content: center;
+    margin-bottom: 1em;
   }
   
   .navContainer{
-    /* background: url('/Users/jaynaxissa/dev/hammie-giver/frontend/public/images/img-1.jpg') fixed;
-    height: 135px;
-    background-size: contain;
     width: 100%;
+    max-width: 1024px;
+    color: white;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    box-shadow: inset 0 0 0 1000px rgbd(0,0,0,0.2);
-    object-fit: contain; */
+    justify-content: space-between;
   }
+
+
   
   .logo{
     font-weight: 500;
   }
   
-  /* .navButton{
+  .navButton{
     margin-left: 20px;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-    color: #003580;
-  } */
+    background: none;
+
+    font-family: 'Poppins', 'sukhumvitset', sans-serif;
+    font-weight: 500;
+    color: #28282D;
+    font-size: 1em;
+  }
