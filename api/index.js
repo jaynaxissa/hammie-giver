@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
 import productsRoute from "./routes/products.js";
 import usersRoute from "./routes/users.js";
+import ordersRoute from "./routes/order.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 dotenv.config();
@@ -22,19 +24,17 @@ mongoose.connection.on("disconnected", () => {
 });
 
 // middlewares
-app.use((req, res, next) => {
-  console.log("hey im middleware");
-  next();
-});
 
+app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
 app.use("/api/products", productsRoute);
 app.use("/api/users", usersRoute);
+app.use("/api/orders", ordersRoute);
 
 app.use((req, res, next) => {
-  console.log("hi im a middleware!");
+  console.log("hi im middleware!");
   next();
 });
 

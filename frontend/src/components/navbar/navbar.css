@@ -1,6 +1,6 @@
 .navbar{
     height: 50px;
-    background-color: #ff75ef;
+    background-color: #FFF;
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
@@ -13,13 +13,63 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    
+  }
+
+  .navList{
+    display: -webkit-box;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 1em;
+    height: 40px;
   }
 
 
   
   .logo{
     font-weight: 500;
+    color: black;
+    position: inherit;
   }
+  
+  .languageIcon{
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 2em;
+    top: 6px;
+  }
+
+  .languageChange{
+    height: 20px;
+    background-color: white;
+    border: 3px solid rgba(255, 255, 255, 0.186);
+    display: contents;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    width: 40%;
+    max-width: 1024px;
+  }
+
+  .navButton-thai{
+    width: 8em;
+    height: 2em;
+    padding-left: 3.5em;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px 0 rgb(90 100 105 / 16%);
+
+    font-size: 0.9em;
+  }
+
   
   .navButton{
     margin-left: 20px;
@@ -33,3 +83,4 @@
     color: #28282D;
     font-size: 1em;
   }
+
