@@ -1,6 +1,7 @@
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import LanguageIcon from "@mui/icons-material/Language";
+// import LanguageIcon from "@mui/icons-material/Language";
+import EmojiNatureIcon from "@mui/icons-material/EmojiNature";
 // import { AuthContext } from "../../context/AuthContext";
 // import { useContext } from "react";
 
@@ -9,9 +10,12 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navContainer">
-        <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-          <span className="logo">TreeGiver</span>
-        </Link>
+        <div className="treeGiverLogo">
+          <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
+            <EmojiNatureIcon className="logo-nature" />
+            <span className="logo">TreeGiver</span>
+          </Link>
+        </div>
         <div className="navItems">
           <div className="navList">
             <button className="navButton">Shop</button>

@@ -14,7 +14,7 @@ const Home = () => {
       <div className="homeContainer">
         <Banner />
         <Cards />
-        <h1>Footer down below2</h1>
+
         <Footer />
       </div>
     </div>
