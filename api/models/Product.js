@@ -42,13 +42,13 @@ const ProductSchema = new mongoose.Schema({
 
   //actual value of the product
   value: {
-    type: Number,
+    type: String,
     required: true,
   },
 
   //price the customer is paying for which will be cheaper than the value
   price: {
-    type: Number,
+    type: String,
     required: true,
   },
 

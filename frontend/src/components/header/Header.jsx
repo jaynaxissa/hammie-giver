@@ -17,19 +17,54 @@ const Header = () => {
 
           <div className="headerSearchItem">
             <div className="optionItem">
-              <span>Hotels</span>
+              <div className="category-name">
+                <img
+                  className="pictureSearch"
+                  src="/images/search-item-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="category-title">Hotels</div>
             </div>
             <div className="optionItem">
-              <span>Restaurants</span>
+              <div className="category-name">
+                <img
+                  className="pictureSearch"
+                  src="/images/search-item-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="category-title">Restaurants</div>
             </div>
             <div className="optionItem">
-              <span>Activities</span>
+              <div className="category-name">
+                <img
+                  className="pictureSearch"
+                  src="/images/search-item-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="category-title">Activities</div>
             </div>
             <div className="optionItem">
-              <span>Meaningful Travel</span>
+              <div className="category-name">
+                <img
+                  className="pictureSearch"
+                  src="/images/search-item-4.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="category-title">Meaningful Travel</div>
             </div>
             <div className="optionItem">
-              <span>Products</span>
+              <div className="category-name">
+                <img
+                  className="pictureSearch"
+                  src="/images/search-item-5.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="category-title">Products</div>
             </div>
           </div>
         </div>

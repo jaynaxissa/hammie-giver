@@ -17,7 +17,7 @@ function CardItem(props) {
   return (
     <>
       <li className="cards__item">
-        <Link className="cards__item__link" to={props.path}>
+        <div className="cards__item__link" to={props.path}>
           <figure className={labelType} data-category={props.item.supportType}>
             <img
               className="cards__item__img"
@@ -28,7 +28,7 @@ function CardItem(props) {
           <div className="givecard">
             <div className="givecard-left">
               <div className="cards__item__info">
-                <h5 className="cards__item__text">{props.item.name}</h5>
+                <h4 className="cards__item__text">{props.item.name}</h4>
                 <div className="cards__item__detail">
                   <p className="cards__item__desc">{props.item.desc1}</p>
                   <p className="cards__item__desc">{props.item.desc2}</p>
@@ -43,24 +43,32 @@ function CardItem(props) {
                 </div>
               </div>
             </div>
+            <div class="vertical-line"></div>
+            {/* <div className="circleDiscount">
+              <div className="circleDiscountNum">
+                {props.item.discountPercentage}%
+                <circle />
+              </div>
+            </div> */}
             <div className="givecard-right">
-              <div className="gc-right">
-                <div className="details-button"></div>
+              <div className="gc-right-info">
                 <div className="value-tag">
-                  <div>Value</div>
-                  <p>{props.item.value}</p>
+                  <h5 className="value-pt">Value</h5>
+                  <p className="valuepricetag">฿{props.item.value}</p>
                 </div>
                 <div className="price-tag">
-                  <div>Price</div>
-                  <p>{props.item.price}</p>
+                  <h5 className="price-pt">Price</h5>
+                  <p className="valuepricetag">฿{props.item.price}</p>
                 </div>
                 <div className="details-button">
-                  <div>SEE DETAILS</div>
+                  <div className="details-bt">
+                    <Link className="seeDetailsButton">see details</Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </Link>
+        </div>
       </li>
     </>
   );
