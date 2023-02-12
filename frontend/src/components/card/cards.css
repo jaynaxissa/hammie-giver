@@ -42,7 +42,7 @@
   }
   
   .cards__item__link {
-    height: 350px;
+    height: 345px;
     display: flex;
     flex-flow: column;
     width: 100%;
@@ -50,7 +50,7 @@
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
     text-decoration: none;
   }
   
@@ -108,9 +108,35 @@
     transition: all 0.2s linear;
   }
 
+  .order-button{
+    box-shadow: 0 0 8px 0 rgb(90 100 105 / 16%);
+    
+    background-color: rgb(0 0 0 / 50%);
+    color: whitesmoke;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    left: 35%;
+    top: 25%;
+    font-family: Poppins;
+    padding: 10px 20px;
+    border-radius: 48px;
+    font-size: 12px;
+    opacity: 0;
+  }
+
+  .cards__item__link:hover .order-button, .cards__item__link.hover .order-button { 
+    opacity: 1;
+  }
+
+  .addSign{
+    font-size: 1rem !important;
+    margin-right: 5px;
+  }
+
   .vertical-line{
     border-left: 1px dashed lightgray;
-    height: 130px;
+    height: 125px;
     }
 
   .givecard{
@@ -118,15 +144,18 @@
   }
 
   .givecard-left{
-    /* background-color: red; */
+    background-color: white;
     width: 65%;
-    height: 130px;   
+    height: 130px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;   
   }
 
   .givecard-right{
-    /* background-color: aqua; */
+    background-color: white;
     width: 50%;
-    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
   }
 
   .gc-right-info{
@@ -142,8 +171,10 @@
   }
   
   .value-tag{
-  margin-left: 60px;
+  margin-left: 30px;
   margin-top: -20px;
+  color: #5A6469;
+  font-weight: 600;
   
   }
 
@@ -160,9 +191,10 @@
   
 
   .price-tag{
-    margin-left: 60px;
+    margin-left: 30px;
     margin-top: -10px;
     color: #FF00A0;
+    font-weight: 600;
   }
 
   .price-pt{
@@ -174,7 +206,7 @@
   }
 
   .details-button{
-    margin-left: 60px;
+    margin-left: 28px;
     margin-top: 10px;
     font-size: 10px;
     font-weight: 400;
@@ -182,8 +214,8 @@
     color: white;
     text-transform: uppercase;
     height: 28px;
-    width: 90px;
-    border-radius: 8px;
+    width: 100px;
+    border-radius: 5px;
     text-align: center;
 
   }

@@ -12,7 +12,6 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        {/* <h1>Hello, react router!</h1> */}
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
       </div>
       <small className="website-rights">
-        © 2023 My Hammie Co., Ltd. All rights reserved.
+        © 2023 My TreeGiver Co., Ltd. All rights reserved.
       </small>
     </div>
   );

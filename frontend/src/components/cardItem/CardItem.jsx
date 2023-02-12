@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import AddIcon from "@mui/icons-material/Add";
 
 function CardItem(props) {
   // To modity the label colour we declare new variable labelType = "what the label colour className is"
@@ -14,6 +15,9 @@ function CardItem(props) {
     labelType += " red-label";
   }
 
+  console.log(props.item);
+  console.log(props.item.photos[0]);
+
   return (
     <>
       <li className="cards__item">
@@ -22,9 +26,19 @@ function CardItem(props) {
             <img
               className="cards__item__img"
               alt="Travel Pic"
-              src={props.item.photos[0]}
+              src={"http://localhost:8800/" + props.item.photos[0]}
             />
           </figure>
+
+          <Link to="test">
+            <div className="order-button">
+              <AddIcon className="addSign" />
+              <div style={{ userSelect: "none", fontWeight: 700 }}>
+                {" "}
+                Add to cart
+              </div>
+            </div>
+          </Link>
           <div className="givecard">
             <div className="givecard-left">
               <div className="cards__item__info">
@@ -44,12 +58,7 @@ function CardItem(props) {
               </div>
             </div>
             <div class="vertical-line"></div>
-            {/* <div className="circleDiscount">
-              <div className="circleDiscountNum">
-                {props.item.discountPercentage}%
-                <circle />
-              </div>
-            </div> */}
+
             <div className="givecard-right">
               <div className="gc-right-info">
                 <div className="value-tag">
@@ -62,7 +71,9 @@ function CardItem(props) {
                 </div>
                 <div className="details-button">
                   <div className="details-bt">
-                    <Link className="seeDetailsButton">see details</Link>
+                    <Link to="/details" className="seeDetailsButton">
+                      see details
+                    </Link>
                   </div>
                 </div>
               </div>

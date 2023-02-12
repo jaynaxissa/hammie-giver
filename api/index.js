@@ -1,6 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from "cors";
+import bodyParser from "body-parser";
 import authRoute from "./routes/auth.js";
 import productsRoute from "./routes/products.js";
 import usersRoute from "./routes/users.js";
@@ -28,6 +30,34 @@ mongoose.connection.on("disconnected", () => {
 app.use(cookieParser());
 app.use(express.json());
 
+//trying this to make the upload works-------------------------------------------------------
+app.use(express.static("./public"));
+app.use("/uploads", express.static("uploads"));
+app.use("/images", express.static("./public/images"));
+
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+
+app.use(cors());
+
+app.use("/api/upload", productsRoute); //not sure about this one?
+
+const PORT = process.env.PORT || 8800;
+
+mongoose
+  .connect(process.env.MONGO, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() =>
+    app.listen(PORT, () =>
+      console.log(`Server Running on Port: http://localhost:${PORT}`)
+    )
+  )
+  .catch((error) => console.log(`${error} did not connect`));
+
+//--------------------------------------------------------------------------------
+//Routes
 app.use("/api/auth", authRoute);
 app.use("/api/products", productsRoute);
 app.use("/api/users", usersRoute);
@@ -49,7 +79,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(8800, () => {
-  connect();
-  console.log("Connected to Backend!");
-});
+// app.listen(8800, () => {
+//   connect();
+//   console.log("Connected to Backend!");
+// });
